@@ -6,11 +6,11 @@ número positivo ingresado.-->
 
 <?php
 
-function pedirNumero(){
-    do{
-        $num = (int)readline("Introduzca un número positivo");
-    }while($num<0);
-}
-pedirNumero();
+
+do{
+    $num = trim(readline("Introduzca un número positivo:"));
+}while($num<0);
+
+echo "<p></p>";
 
 ?>
