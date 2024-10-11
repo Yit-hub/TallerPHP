@@ -8,8 +8,13 @@ número positivo ingresado.-->
 
 
 do{
-    $num = trim(readline("Introduzca un número positivo:"));
+    echo "<p>Introduzca un número positivo:</p>";
+    $num = readline();
+
 }while($num<0);
+if($num>0){
+    echo "<p>$num</p>";
+}
 
 echo "<p></p>";
 
