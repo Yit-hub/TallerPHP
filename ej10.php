@@ -3,8 +3,23 @@ Escribe un script en PHP que pida al usuario ingresar su edad. Luego, utiliza un
 estructura if, elseif, elsepara imprimir un mensaje diferente según la edad:
 "Eres menor de edad" (< 18), "Eres adulto joven" (18-35), "Eres adulto" (36-65),
 "Eres alcalde" (> 65).-->
+<html>
+
+<form action="<?=$_SERVER['PHP_SELF']?>" method="post">
+        <input type="text" name="edad">
+            <input type="submit" name="Enviar">
+    </form>
+
+</html>
+
 
 <?php
+$edad= $_POST["edad"];
+if($edad <=0){
+    echo"edad no válida";
+}else{
+    edades($edad);
+}
 
 function edades($edad){
     if($edad<18){
